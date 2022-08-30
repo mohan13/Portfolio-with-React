@@ -11,9 +11,8 @@ export const ContactData= [
 
   },
   {
-    type: "text",
+    as: "textarea",
     placeholder: "Enter your Message",
     name:'message'
-
   },
 ];

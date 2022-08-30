@@ -2,12 +2,12 @@ import React from "react";
 import { SkillData } from "./SkillData";
 const Skill = () => {
   return (
-    <div className="leading-loose bg-gray-100 p-10">
-      <div className="font-slogan text-6xl">
+    <div className="leading-loose bg-gray-100 p-6 md:p-10">
+      <div className="font-slogan text-3xl md:text-6xl">
         Skills & <br />
         Experience
       </div>
-      <div className="font-para flex flex-col gap-2 text-gray-500 text-lg my-8">
+      <div className="font-para flex flex-col gap-2 text-gray-500 text-sm md:text-lg my-8">
         <div>
           Since beginning my journey as a freelance developer nearly 10 years
           ago, I’ve done remote work for agencies, consulted for startups, and
@@ -32,7 +32,7 @@ const Skill = () => {
         {SkillData?.map((val, i) => {
           return (
             <div key={i} className="my-4">
-              <div className="font-title text-xl">{val.title}</div>
+              <div className="font-title text-md md:text-xl">{val.title}</div>
               <div className="bg-gray-300">{val.progress}</div>
             </div>
           );

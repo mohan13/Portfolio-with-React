@@ -20,18 +20,21 @@ const Toolbar = () => {
     );
   }
   return (
-    <div className="grid grid-cols-2 items-center px-8 py-4 bg-white  ">
+    <div className="flex justify-between md:grid grid-cols-2 items-center px-8 py-4 bg-white  ">
       {model}
-      <Link to="/" className="text-4xl font-logo">
+      <Link
+        to="/"
+        className="text-xl md:pl-14 md:text-4xl border-b-2 md:border-none border-black font-logo"
+      >
         Mohan Grg
       </Link>
-      <div>
-        <NavItems/>
+      <div className="hidden md:block ">
+        <NavItems className />
       </div>
       <div>
         <AiOutlineMenu
           onClick={() => setSidebar(true)}
-          className="w-10 md:hidden h-10 cursor-pointer"
+          className="w-8 h-8 md:w-10 md:hidden md:h-10 cursor-pointer"
         />
       </div>
     </div>
