@@ -3,11 +3,11 @@ import { footerData } from "./footerdata";
 import Icon from "../../UI/Icon";
 const Footer = () => {
   return (
-    <div className="grid md:flex justify-between gap-8 px-10 py-6 bg-black">
+    <div className="grid md:flex justify-between gap-4 md:gap-8 p-6 md:px-10 md:py-6 bg-black">
       {footerData?.map((val, i) => {
         return (
           <div key={i}>
-            <div className="grid gap-4 ">
+            <div className="grid gap-2 md:gap-4 ">
               <div className="font-title text-xl text-white">{val.title}</div>
               <div className="font-para text-sm text-gray-400">{val.para}</div>
               <div className="font-para text-sm text-gray-400">

@@ -7,7 +7,7 @@ const Banner = () => {
         return (
           <div
             key={i}
-            className="flex flex-cols md:grid grid-cols-2 place-content-center bg-gray-100"
+            className="grid md:grid-cols-2 place-content-center bg-gray-100"
           >
             <div className="grid place-content-center p-6 md:p-10 ">
               <div className="font-slogan text-md md:text-7xl">{val.Title1}</div>

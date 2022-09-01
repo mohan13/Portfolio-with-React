@@ -18,7 +18,7 @@ export const footerData = [
       <input
         type="text"
         placeholder="Enter Email Address"
-        className="outline-none px-4 py-2 rounded-sm w-96 text-gray-400 "
+        className="outline-none px-4 py-2 rounded-sm w-full md:w-96 text-gray-400 "
       />
     ),
   },
@@ -27,16 +27,16 @@ export const footerData = [
     para: "Let us be social",
     Icon: [
       {
-        icon: <FaFacebookF color="white" className="w-full h-full"/>,
+        icon: <FaFacebookF color="white" className="w-full h-full" />,
       },
       {
-        icon: <FaInstagram color="white" className="w-full h-full"/>,
+        icon: <FaInstagram color="white" className="w-full h-full" />,
       },
       {
-        icon: <FaGithubAlt color="white" className="w-full h-full"/>,
+        icon: <FaGithubAlt color="white" className="w-full h-full" />,
       },
       {
-        icon: <FaLinkedinIn color="white" className="w-full h-full"/>,
+        icon: <FaLinkedinIn color="white" className="w-full h-full" />,
       },
     ],
   },
