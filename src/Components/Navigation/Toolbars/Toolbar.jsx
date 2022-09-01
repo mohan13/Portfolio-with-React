@@ -20,7 +20,7 @@ const Toolbar = () => {
     );
   }
   return (
-    <div className="flex justify-between md:grid grid-cols-2 items-center px-8 py-4 bg-white  ">
+    <div className="flex justify-between md:grid grid-cols-2 items-center px-8 py-2 bg-white  ">
       {model}
       <Link
         to="/"

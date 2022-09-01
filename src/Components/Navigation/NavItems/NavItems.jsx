@@ -12,7 +12,7 @@ const NavItems = ({ from }) => {
         return (
           <div
             key={i}
-            className="font-title  transition duration-300 hover:text-sky-500 font-bold text-lg"
+            className="font-title  transition duration-300 hover:text-sky-500 font-bold text-sm md:text-lg"
           >
             <NavItem path={val.path} title={val.title} />
           </div>

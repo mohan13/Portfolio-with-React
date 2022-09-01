@@ -1,12 +1,23 @@
 import React from "react";
-
-const Card = ({ image, view }) => {
+import { Link } from "react-router-dom";
+const Card = ({ image, title, para }) => {
   return (
-    <div className="border ">
-        <div className="h-32 absolute bg-green-300">
-          <img src={image} alt="" />
-        </div>
-        <div className="bg-red-200 relative top-0 left-0">{view}</div>
+    <div className="border flex flex-col gap-4 bg-white ">
+      <div className=" bg-green-300">
+        <img src={image} alt="" />
+      </div>
+      <div className="px-4 pb-4 flex flex-col gap-4 ">
+        <div className="font-title text-2xl">{title}</div>
+        <div className="font-para">{para}</div>
+        <Link
+          to="/"
+          className="font-title text-md cursor-pointer text-bolder decoration-2 underline underline-offset-4 text-stone-500"
+        >
+          <button className="border transition duration-300  hover:bg-black hover:text-white border-2 w-36 rounded-sm border-black px-4 py-2 text-sm ">
+            View Details
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

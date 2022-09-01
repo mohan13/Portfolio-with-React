@@ -9,31 +9,29 @@ export const Schema = yup.object().shape({
 });
 const ContactForm = () => {
   return (
-    <div className="bg-gray-200 flex flex-col md:px-64  ">
+    <div className="bg-gray-200 flex flex-col p-4 md:px-52  ">
+      <div className="grid md:mt-14 gap-2">
+        <div className="font-slogan text-3xl md:text-6xl">Contact me</div>
+        <div className="flex flex-col text-sm md:text-lg text-gray-500 gap-3 leading-loose my-4">
+          I'm interested in Freelance opportunities-especially ambitious or
+          large projects.However,if you have other request or question,don't
+          hesitate to use the form.
+        </div>
+      </div>
       <Formik
         initialValues={{ email: "", message: "", name: "" }}
         validationSchema={Schema}
         render={({ errors, handleSubmit }) => {
           return (
             <Form
-              className="my-14 px-10 md:py-14 md:px-24 border-2 grid gap-6"
+              className="my-4 md:my-14 bg-white p-6 md:p-10 rounded-md  border-2 grid gap-6"
               onClick={handleSubmit}
             >
-              <div className="grid gap-2">
-                <div className="font-slogan text-3xl md:text-6xl">
-                  Contact me
-                </div>
-                <div className="flex flex-col text-sm md:text-lg text-gray-500 gap-3 leading-loose my-4">
-                  I'm interested in Freelance opportunities-especially ambitious
-                  or large projects.However,if you have other request or
-                  question,don't hesitate to use the form.
-                </div>
-              </div>
               {ContactData?.map((val, i) => {
                 return (
                   <div key={i}>
                     <Field
-                      className={`outline-none text-md w-full py-2  pl-4 border1 ${
+                      className={`outline-none text-md w-full bg-gray-200 p-4 rounded-sm border1 ${
                         i === ContactData.length - 1 ? "h-40" : ""
                       }`}
                       as={val.as}
