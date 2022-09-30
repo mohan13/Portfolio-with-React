@@ -1,6 +1,7 @@
 import React from "react";
 import { footerData } from "./footerdata";
 import Icon from "../../UI/Icon";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="grid md:flex justify-between gap-4 md:gap-8 p-6 md:px-10 md:py-6 bg-black">
@@ -19,7 +20,8 @@ const Footer = () => {
               {val.Icon?.map((val, i) => {
                 return (
                   <div key={i}>
-                    <Icon icon={val.icon}/>
+                    <Link to={{val.path}}>
+                    <Icon icon={val.icon}/></Link>
                   </div>
                 );
               })}

@@ -5,6 +5,12 @@ export const ContactData= [
     name:'name'
   },
   {
+    type: "text",
+    placeholder: "Enter your Subject",
+    name:'subject'
+
+  },
+  {
     type: "email",
     placeholder: "Enter your email",
     name:'email'

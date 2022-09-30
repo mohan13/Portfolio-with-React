@@ -1,12 +1,8 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import emailjs from "@emailjs/browser";
 import { ContactData } from "./ContactData";
-import * as yup from "yup";
-export const Schema = yup.object().shape({
-  email: yup.string().email().required("Please! Enter you email."),
-  message: yup.string().required("Please! Enter you message."),
-  m: yup.string().required("Please! Enter you message."),
-});
+import { Schema } from "../../Schemas/schema";
 const ContactForm = () => {
   return (
     <div className="bg-gray-200 flex flex-col p-4 md:px-52  ">
@@ -19,13 +15,31 @@ const ContactForm = () => {
         </div>
       </div>
       <Formik
-        initialValues={{ email: "", message: "", name: "" }}
+        initialValues={{ email: "", message: "", name: "", subject: "" }}
         validationSchema={Schema}
-        render={({ errors, handleSubmit }) => {
+        onSubmit={(values) => {
+          console.log(values);
+          emailjs
+            .send(
+              "service_2jcgfww",
+              "template_hbivdo5",
+              values,
+              "gFoy8Sm4gZDOvc5y-"
+            )
+            .then(
+              (result) => {
+                console.log(result.text);
+              },
+              (error) => {
+                console.log(error.text);
+              }
+            );
+        }}
+        render={({ errors, handleSubmit, touched }) => {
           return (
             <Form
               className="my-4 md:my-14 bg-white p-6 md:p-10 rounded-md  border-2 grid gap-6"
-              onClick={handleSubmit}
+              onSubmit={handleSubmit}
             >
               {ContactData?.map((val, i) => {
                 return (
