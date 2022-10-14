@@ -39,7 +39,7 @@ export const footerData = [
         icon: <FaLinkedinIn color="white" className="w-full h-full" />,
       },
     ],
-    path:'pathname="https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies"'
+    path:'pathname="https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies'
   },
 
 ];

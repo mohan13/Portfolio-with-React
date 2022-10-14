@@ -20,8 +20,9 @@ const Footer = () => {
               {val.Icon?.map((val, i) => {
                 return (
                   <div key={i}>
-                    <Link to={{val.path}}>
-                    <Icon icon={val.icon}/></Link>
+                    <div>
+                      <Icon icon={val.icon} />
+                    </div>
                   </div>
                 );
               })}

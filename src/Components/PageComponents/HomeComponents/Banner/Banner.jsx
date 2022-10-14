@@ -1,6 +1,9 @@
 import React from "react";
 import { BannerData } from "./BannerData";
 const Banner = () => {
+  const printpdf =()=>{
+    alert('Not working')
+  }
   return (
     <div>
       {BannerData?.map((val, i) => {
@@ -16,7 +19,8 @@ const Banner = () => {
                 {val.para}
               </div>
               <button 
-              className="border transition duration-300  hover:bg-black hover:text-white border-2 w-36  my-4 rounded-sm border-black px-4 py-2 text-sm ">
+              onClick={printpdf}
+              className=" transition duration-300  hover:bg-black hover:text-white border-2 w-36  my-4 rounded-sm border-black px-4 py-2 text-sm ">
                 {val.btn}
               </button>
             </div>
